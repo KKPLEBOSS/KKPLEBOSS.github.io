@@ -1,0 +1,169 @@
+/* =========================================================
+   STYLE — KAL AUTO
+   SOMMAIRE
+   1. VARIABLES (couleurs, polices)
+   2. BASE
+   3. BOUTONS
+   4. EN-TÊTE
+   5. HERO
+   6. RECHERCHE
+   7. SECTIONS
+   8. CARTES VÉHICULES
+   9. SERVICES
+   10. CONTACT
+   11. PIED DE PAGE
+   12. MOBILE
+   ========================================================= */
+
+
+/* ========== 1. VARIABLES ========== */
+:root {
+  --orange: #f26b1d;        /* couleur principale */
+  --orange-dark: #d4560e;
+  --dark: #121417;          /* fond sombre */
+  --dark-2: #1d2025;
+  --light: #f4f2ee;         /* fond clair */
+  --white: #ffffff;
+  --text: #22252a;
+  --muted: #6b6f76;
+
+  --font-title: "Archivo Black", sans-serif;
+  --font-text: "Hind", sans-serif;
+
+  --radius: 6px;
+  --max: 1180px;
+}
+
+
+/* ========== 2. BASE ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-text); font-size: 17px; line-height: 1.6; color: var(--text); background: var(--light); }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+.container { width: 90%; max-width: var(--max); margin: 0 auto; }
+
+
+/* ========== 3. BOUTONS ========== */
+.btn {
+  display: inline-block; padding: 14px 26px; border: 0; border-radius: var(--radius);
+  font: 600 16px var(--font-text); cursor: pointer; transition: .2s;
+}
+.btn--primary { background: var(--orange); color: var(--white); }
+.btn--primary:hover { background: var(--orange-dark); }
+.btn--light { background: var(--white); color: var(--dark); }
+.btn--light:hover { background: var(--light); }
+.btn--dark { background: var(--dark); color: var(--white); }
+.btn--dark:hover { background: var(--dark-2); }
+.btn--small { padding: 9px 16px; font-size: 14px; background: var(--dark); color: var(--white); }
+.btn--small:hover { background: var(--orange); }
+
+
+/* ========== 4. EN-TÊTE ========== */
+.header { position: sticky; top: 0; z-index: 10; background: var(--dark); }
+.header__inner { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { font-family: var(--font-title); font-size: 22px; color: var(--white); letter-spacing: 1px; }
+.logo span { color: var(--orange); }
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a { color: var(--white); font-weight: 500; opacity: .85; }
+.nav a:hover { opacity: 1; color: var(--orange); }
+.nav__cta { background: var(--orange); padding: 8px 18px; border-radius: var(--radius); opacity: 1 !important; }
+.nav__cta:hover { color: var(--white) !important; background: var(--orange-dark); }
+
+
+/* ========== 5. HERO ========== */
+.hero {
+  min-height: 82vh; display: flex; align-items: center; color: var(--white);
+  background: linear-gradient(90deg, rgba(18,20,23,.9) 0%, rgba(18,20,23,.4) 60%, rgba(18,20,23,.1) 100%),
+              url("images/hero.jpg") center / cover;
+}
+.hero__inner { padding: 80px 0 120px; }
+.tag { display: inline-block; color: var(--orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-bottom: 16px; }
+.hero__title { font-family: var(--font-title); font-size: clamp(42px, 7vw, 84px); line-height: 1.02; text-transform: uppercase; }
+.hero__title span { color: var(--orange); }
+.hero__subtitle { max-width: 480px; margin: 22px 0 32px; font-size: 19px; opacity: .9; }
+.hero__buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+
+/* ========== 6. RECHERCHE ========== */
+.search { margin-top: -50px; position: relative; z-index: 2; }
+.search__box {
+  display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 16px; align-items: end;
+  background: var(--white); padding: 24px; border-radius: var(--radius); box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+.search__box label span { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.search__box select, .search__box input {
+  width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: var(--radius); font: 16px var(--font-text); background: var(--light);
+}
+
+
+/* ========== 7. SECTIONS ========== */
+.section { padding: 90px 0; }
+.section--dark { background: var(--dark); color: var(--white); }
+.section--accent { background: var(--orange); color: var(--white); }
+.section__head { margin-bottom: 44px; }
+.section__number { font-family: var(--font-title); color: var(--orange); font-size: 18px; }
+.section--accent .section__number { color: var(--dark); }
+.section__title { font-family: var(--font-title); font-size: clamp(34px, 5vw, 52px); text-transform: uppercase; line-height: 1.1; }
+.section__intro { color: var(--muted); margin-top: 8px; }
+.section--dark .section__intro { color: #a5a9b0; }
+
+
+/* ========== 8. CARTES VÉHICULES ========== */
+.cars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.car { background: var(--white); color: var(--text); border-radius: var(--radius); overflow: hidden; transition: .25s; }
+.car:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(0,0,0,.15); }
+.car img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #e6e6e6; }
+.car__body { padding: 22px; }
+.car__type { font-size: 13px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 1px; }
+.car h3 { font-size: 22px; margin: 4px 0 12px; }
+.car__specs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.car__specs li { font-size: 13px; background: var(--light); padding: 4px 10px; border-radius: 20px; }
+.car__foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid #eee; padding-top: 16px; }
+.car__price { font-family: var(--font-title); font-size: 20px; }
+.car__price small { display: block; font-family: var(--font-text); font-size: 13px; color: var(--muted); }
+.car--sale { background: var(--dark-2); color: var(--white); }
+.car--sale .car__specs li { background: var(--dark); }
+.car--sale .car__foot { border-color: #30343a; }
+.car--sale .btn--small { background: var(--orange); }
+
+
+/* ========== 9. SERVICES ========== */
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.service { background: var(--white); padding: 30px 24px; border-radius: var(--radius); border-top: 4px solid var(--orange); }
+.service__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--light); color: var(--orange); font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+.service h3 { font-size: 19px; margin-bottom: 6px; }
+.service p { color: var(--muted); font-size: 15px; }
+
+
+/* ========== 10. CONTACT ========== */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.contact__intro p { margin: 14px 0 26px; font-size: 18px; }
+.contact__list li { display: flex; flex-direction: column; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.3); }
+.contact__list strong { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; opacity: .8; }
+.form { display: grid; gap: 14px; background: var(--white); padding: 30px; border-radius: var(--radius); }
+.form input, .form select, .form textarea {
+  width: 100%; padding: 13px; border: 1px solid #ddd; border-radius: var(--radius); font: 16px var(--font-text); background: var(--light); color: var(--text);
+}
+
+
+/* ========== 11. PIED DE PAGE ========== */
+.footer { background: var(--dark); color: #a5a9b0; padding: 26px 0; font-size: 15px; }
+.footer__inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer a:hover { color: var(--orange); }
+
+
+/* ========== 12. MOBILE ========== */
+@media (max-width: 960px) {
+  .cars { grid-template-columns: repeat(2, 1fr); }
+  .services { grid-template-columns: repeat(2, 1fr); }
+  .search__box { grid-template-columns: 1fr 1fr; }
+  .contact { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav a:not(.nav__cta) { display: none; }
+  .cars, .services, .search__box { grid-template-columns: 1fr; }
+  .section { padding: 64px 0; }
+  .hero__inner { padding: 60px 0 100px; }
+}

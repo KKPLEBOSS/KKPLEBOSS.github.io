@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- =========================================================
+       SITE — KAL AUTO (location & vente de véhicules)
+       Fichiers : index.html (contenu) + style.css (design)
+       Chaque bloc commence par un commentaire  ===== NOM =====
+       ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAL Auto — Location et vente de véhicules à Abidjan</title>
+  <meta name="description" content="Louez ou achetez votre véhicule à Abidjan : SUV, berlines, pick-up. Prix clairs, véhicules contrôlés.">
+
+  <!-- Polices : Archivo Black (titres) + Hind (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================== EN-TÊTE / NAVIGATION ===================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#accueil" class="logo">KAL<span>AUTO</span></a>
+      <nav class="nav">
+        <a href="#location">Location</a>
+        <a href="#vente">Vente</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ===================== ACCUEIL (HERO) ===================== -->
+    <section id="accueil" class="hero">
+      <div class="container hero__inner">
+        <p class="tag">Abidjan · Location & Vente</p>
+        <h1 class="hero__title">Louez. Achetez.<br><span>Roulez.</span></h1>
+        <p class="hero__subtitle">
+          Des véhicules contrôlés et entretenus, à la journée ou pour la vie.
+          Prix clairs, sans surprise.
+        </p>
+        <div class="hero__buttons">
+          <a href="#location" class="btn btn--primary">Louer un véhicule</a>
+          <a href="#vente" class="btn btn--light">Voir les ventes</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== BARRE DE RECHERCHE ===================== -->
+    <section class="search">
+      <div class="container">
+        <form class="search__box" action="#contact">
+          <label>
+            <span>Je veux</span>
+            <select>
+              <option>Louer</option>
+              <option>Acheter</option>
+            </select>
+          </label>
+          <label>
+            <span>Type de véhicule</span>
+            <select>
+              <option>Tous</option>
+              <option>SUV</option>
+              <option>Berline</option>
+              <option>Pick-up</option>
+            </select>
+          </label>
+          <label>
+            <span>Date</span>
+            <input type="date">
+          </label>
+          <button type="submit" class="btn btn--primary">Rechercher</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ===================== LOCATION ===================== -->
+    <section id="location" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__number">01</span>
+          <h2 class="section__title">Location</h2>
+          <p class="section__intro">Prix par jour, kilométrage illimité dans Abidjan.</p>
+        </div>
+
+        <div class="cars">
+          <!-- Carte véhicule : copiez un bloc <article> pour en ajouter un -->
+          <article class="car">
+            <img src="images/suv.jpg" alt="SUV blanc Toyota Land Cruiser" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">SUV · 7 places</span>
+              <h3>Toyota Land Cruiser</h3>
+              <ul class="car__specs"><li>Automatique</li><li>Diesel</li><li>Climatisé</li></ul>
+              <div class="car__foot">
+                <p class="car__price">75 000 <small>FCFA / jour</small></p>
+                <a href="#contact" class="btn btn--small">Réserver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="car">
+            <img src="images/berline.jpg" alt="Berline grise Toyota Corolla" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">Berline · 5 places</span>
+              <h3>Toyota Corolla</h3>
+              <ul class="car__specs"><li>Automatique</li><li>Essence</li><li>Climatisé</li></ul>
+              <div class="car__foot">
+                <p class="car__price">35 000 <small>FCFA / jour</small></p>
+                <a href="#contact" class="btn btn--small">Réserver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="car">
+            <img src="images/pickup.jpg" alt="Pick-up bleu double cabine" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">Pick-up · 5 places</span>
+              <h3>Pick-up double cabine</h3>
+              <ul class="car__specs"><li>Manuelle</li><li>Diesel</li><li>4x4</li></ul>
+              <div class="car__foot">
+                <p class="car__price">50 000 <small>FCFA / jour</small></p>
+                <a href="#contact" class="btn btn--small">Réserver</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== VENTE ===================== -->
+    <section id="vente" class="section section--dark">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__number">02</span>
+          <h2 class="section__title">Vente</h2>
+          <p class="section__intro">Véhicules d'occasion vérifiés, papiers à jour.</p>
+        </div>
+
+        <div class="cars">
+          <article class="car car--sale">
+            <img src="images/suv.jpg" alt="SUV blanc à vendre" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">2021 · 45 000 km</span>
+              <h3>Toyota Land Cruiser</h3>
+              <ul class="car__specs"><li>Automatique</li><li>Diesel</li></ul>
+              <div class="car__foot">
+                <p class="car__price">38 500 000 <small>FCFA</small></p>
+                <a href="#contact" class="btn btn--small">Je suis intéressé</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="car car--sale">
+            <img src="images/berline.jpg" alt="Berline grise à vendre" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">2020 · 62 000 km</span>
+              <h3>Toyota Corolla</h3>
+              <ul class="car__specs"><li>Automatique</li><li>Essence</li></ul>
+              <div class="car__foot">
+                <p class="car__price">9 800 000 <small>FCFA</small></p>
+                <a href="#contact" class="btn btn--small">Je suis intéressé</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="car car--sale">
+            <img src="images/pickup.jpg" alt="Pick-up bleu à vendre" loading="lazy">
+            <div class="car__body">
+              <span class="car__type">2022 · 30 000 km</span>
+              <h3>Pick-up double cabine</h3>
+              <ul class="car__specs"><li>Manuelle</li><li>Diesel</li></ul>
+              <div class="car__foot">
+                <p class="car__price">16 900 000 <small>FCFA</small></p>
+                <a href="#contact" class="btn btn--small">Je suis intéressé</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__number">03</span>
+          <h2 class="section__title">Pourquoi nous ?</h2>
+        </div>
+
+        <div class="services">
+          <div class="service">
+            <span class="service__icon">✓</span>
+            <h3>Véhicules contrôlés</h3>
+            <p>Chaque véhicule est inspecté avant chaque location ou vente.</p>
+          </div>
+          <div class="service">
+            <span class="service__icon">⟲</span>
+            <h3>Avec ou sans chauffeur</h3>
+            <p>Conduisez vous-même ou profitez d'un chauffeur expérimenté.</p>
+          </div>
+          <div class="service">
+            <span class="service__icon">✈</span>
+            <h3>Livraison à l'aéroport</h3>
+            <p>Récupérez votre véhicule dès votre arrivée à Abidjan.</p>
+          </div>
+          <div class="service">
+            <span class="service__icon">₣</span>
+            <h3>Paiement facile</h3>
+            <p>Espèces, Mobile Money ou virement, selon votre choix.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section section--accent">
+      <div class="container contact">
+        <div class="contact__intro">
+          <span class="section__number">04</span>
+          <h2 class="section__title">Contactez-nous</h2>
+          <p>Une réservation, une question sur un véhicule ? Écrivez-nous, nous répondons rapidement.</p>
+          <ul class="contact__list">
+            <li><strong>Téléphone</strong><a href="tel:+2250700000000">+225 07 89 30 84 62</a></li>
+            <li><strong>E-mail</strong><a href="mailto:contact@ivoireauto.ci">contact@KALauto.ci</a></li>
+            <li><strong>Adresse</strong><span>Abidjan, Cocody</span></li>
+            <li><strong>Horaires</strong><span>Lun – Sam · 8h – 19h</span></li>
+          </ul>
+        </div>
+
+        <!-- Formulaire (visuel : à relier à un service d'envoi d'e-mail) -->
+        <form class="form">
+          <input type="text" placeholder="Nom complet" required>
+          <input type="tel" placeholder="Téléphone" required>
+          <select>
+            <option>Location</option>
+            <option>Achat</option>
+          </select>
+          <textarea rows="4" placeholder="Votre message"></textarea>
+          <button type="submit" class="btn btn--dark">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===================== PIED DE PAGE ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 KAL Auto — Location & vente de véhicules</p>
+      <a href="#accueil">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
